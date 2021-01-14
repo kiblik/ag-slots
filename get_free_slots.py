@@ -31,7 +31,7 @@ for drivein in my_driveins:
         'selected_day': '{} 00:00:00'.format(args.date)
       }
     ).json()['payload']
-    row += [am['opens_at'], am['break_from'] or '', am['break_thru'] or '', am['closes_at'], am['status']['capacity'], am['status']['free']]
+    row += [am['opens_at'] or '', am['break_from'] or '', am['break_thru'] or '', am['closes_at'] or '', am['status']['capacity'], am['status']['free']]
     if am['show_radios'] == 1:
         pm = s.post('{}/validate_drivein_times'.format(root),
           json={
