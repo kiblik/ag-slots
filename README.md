@@ -2,7 +2,7 @@
 
 ```
 pip3 install -r requirements.txt
-python3 get_free_slots.py
+python3 get_free_slots.py --date 2021-01-15 --city Bratislava
 ```
 
 Example:
